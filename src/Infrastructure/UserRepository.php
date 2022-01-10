@@ -28,7 +28,7 @@ final class UserRepository
      * @param string $name 姓名
      * @return \App\Model\User[] ユーザーオブジェクトの配列
      */
-    public function findAll(RoleName $roleName, string $name)
+    public function findAll(RoleName $roleName, string $name): array
     {
         $sql = <<<SQL
 SELECT
