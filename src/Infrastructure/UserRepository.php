@@ -25,7 +25,7 @@ final class UserRepository
         $sql = <<<SQL
 SELECT
     `id`,
-    `username`,
+    `login_id`,
     `name`
 FROM
     `users`
