@@ -14,7 +14,7 @@ final class UserRepository
      * ユーザー情報をすべて取得する
      *
      * @param mixed $params パラメータ
-     * @return array|false
+     * @return \App\Model\User[] ユーザーオブジェクトの配列
      */
     public static function findAll($params)
     {
