@@ -12,6 +12,14 @@ docker-compose up -d
 
 ## PHP動作確認
 
+### パターン1：ファイル実行
+
+```bash
+docker exec -it app php src/Shell/exampleShell.php
+```
+
+### パターン2：対話シェル
+
 ```bash
 docker exec -it app php -a
 ```
@@ -20,9 +28,9 @@ docker exec -it app php -a
 
 ```php
 // 読み込みたいクラス
-require('config/app.php');
-require('src/Model/User.php');
-require('src/Infrastructure/UserRepository.php');
+require 'config/app.php';
+require 'src/Model/User.php';
+require 'src/Infrastructure/UserRepository.php';
 
 // 実行したい処理
 $users = \App\Infrastructure\UserRepository::findAll(['roleName' => 'general', 'name' => '%鈴木%']);
