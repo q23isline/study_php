@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace App\Infrastructure;
 
+use InvalidArgumentException;
 use PDO;
 
 /**
@@ -18,6 +19,37 @@ final class UserRepository
      */
     public static function findAll($params)
     {
+        if (is_null($params)) {
+            throw new InvalidArgumentException('params に null は設定できません');
+        }
+
+        if (!is_array($params)) {
+            throw new InvalidArgumentException('params に配列以外は設定できません');
+        }
+
+        if (count($params) !== 2) {
+            throw new InvalidArgumentException('params の項目数は 2つ以外設定できません');
+        }
+
+        if (
+            !array_key_exists('roleName', $params)
+            || !array_key_exists('name', $params)
+        ) {
+            throw new InvalidArgumentException('params は roleName キーと name キーが必須です');
+        }
+
+        if (!is_string($params['roleName'])) {
+            throw new InvalidArgumentException('params["roleName"] は文字列以外設定できません');
+        }
+
+        if (!in_array($params['roleName'], ['admin', 'general'], true)) {
+            throw new InvalidArgumentException('params["roleName"] は "admin" と "general" 以外設定できません');
+        }
+
+        if (!is_string($params['name'])) {
+            throw new InvalidArgumentException('params["name"] は文字列以外設定できません');
+        }
+
         // グローバル変数読み込み
         global $CONF;
         // プレースホルダの文字列をエスケープさせるため（SQL インジェクション対策） PDO::ATTR_EMULATE_PREPARES を false
