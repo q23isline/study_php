@@ -4,8 +4,8 @@ declare(strict_types=1);
 namespace App\Model;
 
 /**
- * User
+ * UserModel
  */
-final class User
+final class UserModel
 {
 }
