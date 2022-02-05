@@ -6,6 +6,7 @@ PHP 勉強用リポジトリ
 
 ```bash
 git clone https://github.com/q23isline/study_php.git
+cd study_php
 docker-compose build
 docker-compose up -d
 ```
