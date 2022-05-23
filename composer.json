@@ -1,0 +1,17 @@
+{
+    "name": "q23isline/study_php",
+    "description": "Study PHP",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Q23isline\\StudyPhp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "q23isline"
+        }
+    ],
+    "require": {}
+}
