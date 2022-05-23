@@ -1,4 +1,4 @@
-name: PHP Composer
+name: CI
 
 on:
   push:
@@ -37,6 +37,6 @@ jobs:
 
     # - name: Run test suite
     #   run: composer run-script test
-    
+
     - name: Run PHPStan
       run: vendor/bin/phpstan.phar analyse
