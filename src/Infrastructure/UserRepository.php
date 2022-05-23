@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace App\Infrastructure;
 
+use App\Model\RoleName;
 use PDO;
 
 /**
@@ -11,17 +12,24 @@ use PDO;
 final class UserRepository
 {
     /**
+     * コンストラクタ
+     *
+     * @param \PDO $pdo PHP データベース接続オブジェクト
+     */
+    public function __construct(
+        private PDO $pdo
+    ) {
+    }
+
+    /**
      * ユーザー情報をすべて取得する
      *
-     * @param mixed $params パラメータ
+     * @param \App\Model\RoleName $roleName ロール名
+     * @param string $name 姓名
      * @return \App\Model\User[] ユーザーオブジェクトの配列
      */
-    public static function findAll($params)
+    public function findAll(RoleName $roleName, string $name): array
     {
-        // グローバル変数読み込み
-        global $CONF;
-        // プレースホルダの文字列をエスケープさせるため（SQL インジェクション対策） PDO::ATTR_EMULATE_PREPARES を false
-        $pdo = new PDO($CONF['dsn'], $CONF['username'], $CONF['password'], [PDO::ATTR_EMULATE_PREPARES => false]);
         $sql = <<<SQL
 SELECT
     `id`,
@@ -35,9 +43,11 @@ WHERE
 SQL;
 
         // 実行する SQL 文作成
-        $statement = $pdo->prepare($sql);
+        $statement = $this->pdo->prepare($sql);
+        $statement->bindValue(':roleName', $roleName->value, PDO::PARAM_STR);
+        $statement->bindValue(':name', "%{$name}%", PDO::PARAM_STR);
         // SQL 実行
-        $statement->execute($params);
+        $statement->execute();
 
         // SQL 実行結果をオブジェクトにつめて返す
         return $statement->fetchAll(PDO::FETCH_CLASS, 'App\Model\User');
