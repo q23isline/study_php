@@ -1,4 +1,4 @@
-version: '3.5'
+version: '3.8'
 
 volumes:
   db-data:
@@ -17,6 +17,8 @@ services:
     container_name: db
     ports:
       - 3306:3306
+    # パスワードで mysql にログインできるようにする
+    command: --authentication_policy=mysql_native_password
     environment:
       - MYSQL_DATABASE=study_php
       - MYSQL_USER=default
