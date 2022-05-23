@@ -9,6 +9,7 @@ git clone https://github.com/q23isline/study_php.git
 cd study_php
 docker-compose build
 docker-compose up -d
+docker exec -it app php composer.phar install
 ```
 
 ## PHP動作確認
@@ -36,4 +37,10 @@ require 'src/Infrastructure/UserRepository.php';
 // 実行したい処理
 $users = \App\Infrastructure\UserRepository::findAll(['roleName' => 'general', 'name' => '%鈴木%']);
 print_r($users);
+```
+
+## 静的分析チェック
+
+```bash
+docker exec -it app ./vendor/bin/phpstan analyse
 ```
