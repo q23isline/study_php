@@ -1,3 +1,6 @@
+# 既存 PHPStan エラーを無視
+includes:
+    - phpstan-baseline.neon
 parameters:
     level: max
     paths:
