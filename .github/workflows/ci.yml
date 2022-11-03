@@ -40,3 +40,6 @@ jobs:
 
     - name: Run PHPStan
       run: vendor/bin/phpstan.phar analyse
+
+    - name: Run PHP CodeSniffer
+      run: vendor/bin/phpcs --colors -p src/
