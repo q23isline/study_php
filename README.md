@@ -58,7 +58,7 @@ docker exec -it app ./vendor/bin/phpstan analyse
 
 ```bash
 # コーディング標準チェック実行
-docker exec -it app ./vendor/bin/phpcs --standard=PSR2 --colors -p src/
+docker exec -it app ./vendor/bin/phpcs --colors -p src/
 # コーディング標準チェック自動整形実行
-docker exec -it app ./vendor/bin/phpcbf --standard=PSR2 --colors -p src/
+docker exec -it app ./vendor/bin/phpcbf --colors -p src/
 ```
