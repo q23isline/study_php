@@ -1,0 +1,106 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Call to an undefined static method AccountRepository\\:\\:find\\(\\)\\.$#"
+			count: 1
+			path: src/Shell/phpstanLevel0Shell.php
+
+		-
+			message: "#^Call to function is_array\\(\\) on a separate line has no effect\\.$#"
+			count: 1
+			path: src/Shell/phpstanLevel0Shell.php
+
+		-
+			message: "#^Function isArray not found\\.$#"
+			count: 1
+			path: src/Shell/phpstanLevel0Shell.php
+
+		-
+			message: "#^Function is_array invoked with 0 parameters, 1 required\\.$#"
+			count: 1
+			path: src/Shell/phpstanLevel0Shell.php
+
+		-
+			message: "#^Instantiated class ProfileRepository not found\\.$#"
+			count: 1
+			path: src/Shell/phpstanLevel0Shell.php
+
+		-
+			message: "#^Method Account\\:\\:find\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Shell/phpstanLevel0Shell.php
+
+		-
+			message: "#^Undefined variable\\: \\$account$#"
+			count: 1
+			path: src/Shell/phpstanLevel0Shell.php
+
+		-
+			message: "#^Variable \\$profile might not be defined\\.$#"
+			count: 1
+			path: src/Shell/phpstanLevel1Shell.php
+
+		-
+			message: "#^Call to an undefined method BookRepository\\:\\:find\\(\\)\\.$#"
+			count: 1
+			path: src/Shell/phpstanLevel2Shell.php
+
+		-
+			message: "#^PHPDoc tag @param references unknown parameter\\: \\$id$#"
+			count: 1
+			path: src/Shell/phpstanLevel2Shell.php
+
+		-
+			message: "#^Function findBook\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Shell/phpstanLevel3Shell.php
+
+		-
+			message: "#^Function findBook\\(\\) should return array but returns null\\.$#"
+			count: 1
+			path: src/Shell/phpstanLevel3Shell.php
+
+		-
+			message: "#^Property Book\\:\\:\\$id \\(int\\) does not accept string\\.$#"
+			count: 1
+			path: src/Shell/phpstanLevel3Shell.php
+
+		-
+			message: "#^Function setDefaultAuthor\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Shell/phpstanLevel4Shell.php
+
+		-
+			message: "#^Negated boolean expression is always false\\.$#"
+			count: 1
+			path: src/Shell/phpstanLevel4Shell.php
+
+		-
+			message: "#^Unreachable statement \\- code above always terminates\\.$#"
+			count: 1
+			path: src/Shell/phpstanLevel4Shell.php
+
+		-
+			message: "#^Parameter \\#1 \\$id of method CategoryRepository\\:\\:findById\\(\\) expects int, string given\\.$#"
+			count: 1
+			path: src/Shell/phpstanLevel5Shell.php
+
+		-
+			message: "#^Function deleteBook\\(\\) has parameter \\$id with no type specified\\.$#"
+			count: 1
+			path: src/Shell/phpstanLevel6Shell.php
+
+		-
+			message: "#^Function deleteAuthor\\(\\) should return int but returns int\\|string\\.$#"
+			count: 1
+			path: src/Shell/phpstanLevel7Shell.php
+
+		-
+			message: "#^Property Category\\:\\:\\$name \\(string\\) does not accept string\\|null\\.$#"
+			count: 1
+			path: src/Shell/phpstanLevel8Shell.php
+
+		-
+			message: "#^Parameter \\#1 \\$id of function findCategoryById expects int, mixed given\\.$#"
+			count: 1
+			path: src/Shell/phpstanLevel9Shell.php
