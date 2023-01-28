@@ -3,7 +3,7 @@
 [![GitHub Actions](https://github.com/q23isline/study_php/actions/workflows/ci.yml/badge.svg)](https://github.com/q23isline/study_php/actions/workflows/ci.yml)
 [![PHPStan](https://img.shields.io/badge/PHPStan-level%20max-brightgreen.svg)](https://github.com/phpstan/phpstan)
 [![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=555555&color=007acc&logoColor=007acc)](https://open.vscode.dev/q23isline/study_php)
-[![PHP](https://img.shields.io/static/v1?logo=php&label=PHP&message=v8.1.6&labelColor=555555&color=777BB4&logoColor=777BB4)](https://www.php.net)
+[![PHP](https://img.shields.io/static/v1?logo=php&label=PHP&message=v8.2.1&labelColor=555555&color=777BB4&logoColor=777BB4)](https://www.php.net)
 [![MySQL](https://img.shields.io/static/v1?logo=mysql&label=MySQL&message=v8.0&labelColor=555555&color=4479A1&logoColor=4479A1)](https://dev.mysql.com)
 
 PHP 勉強用リポジトリ
