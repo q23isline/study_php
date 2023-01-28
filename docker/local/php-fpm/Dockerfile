@@ -1,4 +1,4 @@
-FROM php:8.1.12-fpm-buster
+FROM php:8.2.1-fpm-buster
 
 RUN apt-get update
 

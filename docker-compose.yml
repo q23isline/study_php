@@ -9,6 +9,7 @@ services:
     build: ./docker/local/php-fpm
     container_name: app
     volumes:
+      - ./docker/local/php-fpm/php.ini:/usr/local/etc/php/php.ini
       - ./:/var/www/html
     depends_on:
       - db
