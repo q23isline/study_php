@@ -38,6 +38,9 @@ jobs:
     # - name: Run test suite
     #   run: composer run-script test
 
+    - name: Run PHPUnit
+      run: vendor/bin/phpunit --bootstrap tests/bootstrap.php tests
+
     - name: Run PHPStan
       run: vendor/bin/phpstan.phar analyse
 

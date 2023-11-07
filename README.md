@@ -62,3 +62,9 @@ docker exec -it app ./vendor/bin/phpcs --colors -p src/
 # コーディング標準チェック自動整形実行
 docker exec -it app ./vendor/bin/phpcbf --colors -p src/
 ```
+
+## ユニットテスト単体実行
+
+```bash
+docker exec -it app ./vendor/bin/phpunit --bootstrap tests/bootstrap.php tests
+```
