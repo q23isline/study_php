@@ -5,8 +5,13 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Q23isline\\StudyPhp\\": "src/"
-                }
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Test\\": "tests/"
+        }
     },
     "authors": [
         {
